@@ -52,8 +52,10 @@ export default {
         this.isLoading = true;
 		this.axios.get('/api/movieOnInfoList?cityId='+cityId).then((res)=>{
                     var msg = res.data.msg;
+
                     if( msg === 'ok' ){
-							this.movieList = res.data.data.movieList;
+                            this.movieList = res.data.data.movieList;
+                            // console.log(this.movieList);
 							this.isLoading=false;
 							this.prevCityId = cityId;
 					// 		this.$nextTick(()=>{
@@ -92,7 +94,7 @@ export default {
 			},
 	methods : {
         handleToDetail(movieId){
-            // console.log(movieId);
+             //console.log(movieId);
 			this.$router.push('/movie/detail/1/' + movieId);
         },
         handleToScroll(pos){

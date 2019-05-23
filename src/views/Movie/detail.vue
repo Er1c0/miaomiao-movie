@@ -78,7 +78,6 @@ import Header from '@/components/Header';
 export default {
     name : 'Detail',
     data(){
-
         return {
             detailMovie : {},
             isLoading : true
